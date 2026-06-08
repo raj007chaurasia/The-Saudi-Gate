@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
       <header className={`fixed top-0 left-0 right-0 w-full z-40 transition-all duration-500 ${isSticky ? 'pt-2' : 'pt-0'}`}>
         <div
           className={`mx-auto max-w-[1440px] px-6 sm:px-10 transition-all duration-500 ${isSticky
-              ? 'glass-navbar-sticky rounded-b-2xl py-3 border-t-0 shadow-2xl'
-              : 'glass-navbar sm:rounded-3xl py-5 sm:mt-6 border shadow-xl'
+              ? 'glass-navbar-sticky rounded-b-2xl py-2 border-t-0 shadow-2xl'
+              : 'glass-navbar sm:rounded-3xl py-3 sm:mt-4 border shadow-xl'
             }`}
           style={{ width: 'calc(100% - 2rem)' }}
         >

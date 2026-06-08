@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '@/components/layout/Navbar'
 import Hero from '@/components/sections/Hero'
 import TrustBar from '@/components/sections/TrustBar'
@@ -10,9 +10,14 @@ import SetupInSaudi from '@/components/sections/SetupInSaudi'
 import Footer from '@/components/layout/Footer'
 import Lenis from 'lenis'
 import { CustomCursor } from '@/components/ui/custom-cursor'
+import { Preloader } from '@/components/ui/preloader'
 
 const App: React.FC = () => {
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
+    if (loading) return // Don't init smooth scroll until preloader is done
+
     // Initialize Lenis smooth scroll
     const lenis = new Lenis({
       duration: 1.2,
@@ -33,10 +38,13 @@ const App: React.FC = () => {
       lenis.destroy()
       cancelAnimationFrame(rafId)
     }
-  }, [])
+  }, [loading])
 
   return (
     <div className="relative min-h-screen bg-primary-bg overflow-x-clip font-sans selection:bg-green-500 selection:text-white">
+      {/* Premium Preloader */}
+      <Preloader onComplete={() => setLoading(false)} />
+
       {/* Premium custom mouse follower */}
       <CustomCursor />
 
