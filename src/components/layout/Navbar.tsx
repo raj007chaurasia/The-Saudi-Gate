@@ -45,29 +45,12 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-3.5 focus:outline-none focus:ring-2 focus:ring-[#22C55E] rounded-lg p-1 group"
               onClick={() => setActiveLink('Home')}
             >
-              <div className="relative flex items-center justify-center w-12 h-12 bg-white/5 rounded-xl border border-white/10 group-hover:border-green-500/30 transition-all duration-500">
-                <svg
-                  viewBox="0 0 100 100"
-                  className="w-8 h-8 text-[#22C55E] drop-shadow-[0_0_8px_rgba(34,197,94,0.5)] fill-none stroke-current"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M25 90 C 25 45, 75 45, 75 90" stroke="url(#logo-grad-green)" />
-                  <path d="M38 90 C 38 60, 62 60, 62 90" stroke="url(#logo-grad-green)" strokeWidth="5" />
-                  <path d="M50 48 Q 50 15, 20 25" />
-                  <path d="M50 48 Q 50 10, 50 5" />
-                  <path d="M50 48 Q 50 15, 80 25" />
-                  <path d="M50 48 Q 45 28, 28 35" />
-                  <path d="M50 48 Q 55 28, 72 35" />
-                  <path d="M50 90 L 50 48" strokeWidth="8" />
-                  <defs>
-                    <linearGradient id="logo-grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#22C55E" />
-                      <stop offset="100%" stopColor="#10B981" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+              <div className="relative flex items-center justify-center w-16 h-16 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                <img
+                  src="/logo.png"
+                  alt="The Saudi Gate Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-white text-base tracking-tight leading-tight uppercase">
